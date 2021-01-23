@@ -13,7 +13,7 @@ public class ReqBody {
     
     private Integer accountId;
     private String fromAmount;
-        private String toAmount;
+    private String toAmount;
     private String fromDate;
     private String toDate;
 

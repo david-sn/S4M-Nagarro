@@ -11,7 +11,7 @@ import com.nagarro.s4m.service.impl.DoSearchService;
 import java.security.Principal;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +25,7 @@ public class StatmentSearchController {
     @Autowired
     private DoSearchService doSearchService;
 
-    @GetMapping("/")
+    @PostMapping("/")
     public List<Statement> test(@RequestBody ReqBody body, Principal p) {
         return doSearchService.doSearch(body.getAccountId(), body.getFromDate(), body.getToDate(), body.getFromAmount(), body.getToAmount(), p);
     }
